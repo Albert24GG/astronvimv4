@@ -7,13 +7,7 @@ M.mason_lspconfig = {
 
 -- Linters & Formatters
 M.mason_null_ls = {
-  ensure_installed = {
-    -- Lua
-    "selene",
-
-    -- Go
-    "golangci-lint",
-  },
+  ensure_installed = {},
   automatic_installation = {
     exclude = {
       "luacheck",
@@ -33,21 +27,6 @@ M.mason_dap = {
       "cppdbg",
     },
   },
-}
-
-M.none_ls = {
-  opts = function(_, config)
-    local null_ls = require "null-ls"
-
-    config.sources = vim.list_extend(config.sources or {}, {
-      -- Lua
-      null_ls.builtins.diagnostics.selene,
-
-      -- Go
-      null_ls.builtins.diagnostics.golangci_lint,
-    })
-    return config
-  end,
 }
 
 M.cmp = {
