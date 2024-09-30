@@ -7,7 +7,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         -- overrides `require("mason-lspconfig").setup(...)`
         opts = {
-            require("config.overrides").mason_lspconfig.ensure_installed,
+            ensure_installed = require("config.overrides").mason_lspconfig.ensure_installed,
         },
     },
     -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
