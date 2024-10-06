@@ -1,3 +1,3 @@
 return {
-  { "hrsh7th/nvim-cmp", opts = require("config.overrides").cmp },
+    { "hrsh7th/nvim-cmp", opts = require("config.overrides").cmp },
 }
