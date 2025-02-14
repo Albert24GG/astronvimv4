@@ -4,7 +4,6 @@
 
 ---@type LazySpec
 return {
-  -- TODO: Remove branch v4 on release
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.colorscheme.nightfox-nvim" },
   { import = "astrocommunity.pack.lua" },
@@ -15,6 +14,7 @@ return {
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.fish" },
   -- { import = "astrocommunity.completion.codeium-vim" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
