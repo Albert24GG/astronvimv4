@@ -28,6 +28,7 @@ return {
   { import = "astrocommunity.register.nvim-neoclip-lua" },
   { import = "astrocommunity.lsp.lsp-signature-nvim" },
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
+  { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
   -- { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
   -- { import = "astrocommunity.utility.noice-nvim" },
   -- { import = "astrocommunity.lsp.nvim-lint" },
