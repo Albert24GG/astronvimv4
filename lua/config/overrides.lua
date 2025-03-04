@@ -39,8 +39,8 @@ M.mason_dap = {
   },
 }
 
-M.cmp = {
-  formatting = {
+M.cmp = function(_, opts)
+  opts.formatting = {
     format = function(entry, vim_item)
       vim_item.menu = ({
         luasnip = "[Luasnip]",
@@ -51,16 +51,16 @@ M.cmp = {
       })[entry.source.name]
       return vim_item
     end,
-  },
+  }
 
-  sources = require("cmp").config.sources {
+  opts.sources = require("cmp").config.sources {
     { name = "nvim_lsp", priority = 1000 },
     { name = "luasnip", priority = 750 },
     { name = "buffer", priority = 500 },
     { name = "path", priority = 250 },
-  },
+  }
 
-  sorting = {
+  opts.sorting = {
     comparators = {
       -- Custom kind comparator
       function(entry1, entry2)
@@ -109,7 +109,7 @@ M.cmp = {
       require("cmp.config.compare").length,
       require("cmp.config.compare").order,
     },
-  },
-}
+  }
+end
 
 return M
