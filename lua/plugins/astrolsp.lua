@@ -52,7 +52,10 @@ return {
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
     config = {
-      clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      clangd = {
+        capabilities = { offsetEncoding = "utf-8" },
+        cmd = { "clangd", "--fallback-style=LLVM" },
+      },
       rust_analyzer = {
         settings = {
           ["rust-analyzer"] = {

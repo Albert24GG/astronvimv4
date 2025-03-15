@@ -1,21 +1,12 @@
 local M = {}
 
 -- LSP
-M.mason_lspconfig = {
-  ensure_installed = {},
-}
+M.mason_lspconfig = function(_, opts)
+  opts.ensure_installed = vim.tbl_filter(function(server) return server ~= "clangd" end, opts.ensure_installed or {})
+end
 
 -- Linters & Formatters
-M.mason_null_ls = {
-  ensure_installed = {},
-  automatic_installation = {
-    exclude = {
-      "luacheck",
-      "shellcheck",
-      "taplo",
-    },
-  },
-}
+M.mason_null_ls = {}
 
 M.mason_dap = {
   ensure_installed = {
