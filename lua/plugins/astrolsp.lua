@@ -44,8 +44,6 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      -- "pyright"
-      "clangd",
       "rust_analyzer",
       "fish_lsp",
     },

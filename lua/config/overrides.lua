@@ -2,7 +2,7 @@ local M = {}
 
 -- LSP
 M.mason_lspconfig = function(_, opts)
-  opts.ensure_installed = vim.tbl_filter(function(server) return server ~= "clangd" end, opts.ensure_installed or {})
+  -- opts.ensure_installed = vim.tbl_filter(function(server) return server ~= "clangd" end, opts.ensure_installed or {})
 end
 
 -- Linters & Formatters
@@ -29,6 +29,13 @@ M.mason_dap = {
     end,
   },
 }
+
+M.mason_tool_installer = function(_, opts)
+  -- Remove clangd from the list of installed servers (use the one from the system)
+  -- opts.ensure_installed = vim.tbl_filter(function(server) return server ~= "clangd" end, opts.ensure_installed or {})
+end
+
+M.blink = {}
 
 M.cmp = function(_, opts)
   opts.formatting = {
