@@ -33,6 +33,7 @@ M.mason_dap = {
 M.mason_tool_installer = {
   ensure_installed = {
     "serve-d",
+    "cpptools",
   },
 }
 

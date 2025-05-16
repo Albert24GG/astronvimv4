@@ -1,6 +1,5 @@
 -- Customize Mason plugins
 
-if true then return {} end
 ---@type LazySpec
 return {
   -- use mason-tool-installer for automatically installing Mason packages
