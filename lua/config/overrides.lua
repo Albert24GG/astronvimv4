@@ -30,10 +30,11 @@ M.mason_dap = {
   },
 }
 
-M.mason_tool_installer = function(_, opts)
-  -- Remove clangd from the list of installed servers (use the one from the system)
-  -- opts.ensure_installed = vim.tbl_filter(function(server) return server ~= "clangd" end, opts.ensure_installed or {})
-end
+M.mason_tool_installer = {
+  ensure_installed = {
+    "serve-d",
+  },
+}
 
 M.blink = {}
 
