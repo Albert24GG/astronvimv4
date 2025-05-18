@@ -1,12 +1,11 @@
 local M = {}
 
--- LSP
-M.mason_lspconfig = function(_, opts)
-  -- opts.ensure_installed = vim.tbl_filter(function(server) return server ~= "clangd" end, opts.ensure_installed or {})
-end
-
--- Linters & Formatters
-M.mason_null_ls = {}
+M.mason_tool_installer = {
+  ensure_installed = {
+    "serve-d",
+    "cpptools",
+  },
+}
 
 M.mason_dap = {
   ensure_installed = {
@@ -29,15 +28,6 @@ M.mason_dap = {
     end,
   },
 }
-
-M.mason_tool_installer = {
-  ensure_installed = {
-    "serve-d",
-    "cpptools",
-  },
-}
-
-M.blink = {}
 
 M.cmp = function(_, opts)
   opts.formatting = {
