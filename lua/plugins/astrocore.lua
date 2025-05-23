@@ -9,6 +9,7 @@ return {
     options = {
       opt = {
         wrap = true,
+        scrolloff = 5,
       },
     },
   },
