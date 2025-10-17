@@ -15,6 +15,7 @@ return {
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.fish" },
+  { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },
